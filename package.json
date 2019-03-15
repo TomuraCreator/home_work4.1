@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TomuraCreator/home_work2.3.git"
+    "url": "git+https://github.com/TomuraCreator/home_work4.1"
   },
   "author": "Tomura_Kreator",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/TomuraCreator/home_work2.3/issues"
+    "url": "https://github.com/TomuraCreator/home_work4.1/issues"
   },
 
   "devDependencies": {
