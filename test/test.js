@@ -1,4 +1,4 @@
-import {showColor} from '../src/js/app.js';
+import showColor from '../src/js/app';
 
 test('critical HP', () => {
   const characters = { name: 'маг', health: 14 };
@@ -15,6 +15,12 @@ test('wounded HP', () => {
 test('healthy HP', () => {
   const characters = { name: 'маг', health: 70 };
   const received = 'healthy';
+  const expected = showColor(characters);
+  expect(received).toBe(expected);
+});
+test('healthy HP', () => {
+  const characters = { name: 'маг', health: undefined };
+  const received = 'неверные данные';
   const expected = showColor(characters);
   expect(received).toBe(expected);
 });

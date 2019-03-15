@@ -13,10 +13,9 @@
         "ecmaVersion": 2018
     },
     "rules": {
-        "no-restricted-syntax": [
-            "error",
-            "LabeledStatement",
-            "WithStatement"
-        ]
+        "import/extensions": [
+        "error",
+        "ignorePackages"
+    ]
     }
 }
