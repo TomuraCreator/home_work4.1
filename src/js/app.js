@@ -1,4 +1,4 @@
-
+const magisto = { class: 'маг', health: '' };
 function showColor(char) {
   if (char.health > 50) {
     return 'healthy';
@@ -7,7 +7,10 @@ function showColor(char) {
   } if (char.health <= 15 && char.health > 0) {
     return 'critical';
   }
-  return 'неверные данные';
+  if (typeof char.health === 'string' || char.health === '') {
+    return 'неверные данные';
+  }
+  return 0;
 }
-
-export default showColor;
+console.info(showColor(magisto));
+export { showColor, magisto };

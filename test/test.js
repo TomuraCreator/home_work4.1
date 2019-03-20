@@ -1,26 +1,25 @@
-import showColor from '../src/js/app';
+import { showColor, magisto } from '../src/js/app';
 
-test('critical HP', () => {
-  const characters = { name: 'маг', health: 14 };
-  const received = 'critical';
-  const expected = showColor(characters);
-  expect(received).toBe(expected);
+
+test('HP', () => {
+  const receivedWound = 'wounded';
+  const receivedCritical = 'critical';
+  const receivedHealth = 'healthy';
+  if (showColor(magisto) === receivedWound) {
+    expect(receivedWound).toBe(showColor(magisto));
+  }
+  if (showColor(magisto) === receivedHealth) {
+    expect(receivedHealth).toBe(showColor(magisto));
+  }
+  if (showColor(magisto) === receivedCritical) {
+    expect(receivedCritical).toBe(showColor(magisto));
+  }
 });
-test('wounded HP', () => {
-  const characters = { name: 'маг', health: 40 };
-  const received = 'wounded';
-  const expected = showColor(characters);
-  expect(received).toBe(expected);
-});
-test('healthy HP', () => {
-  const characters = { name: 'маг', health: 70 };
-  const received = 'healthy';
-  const expected = showColor(characters);
-  expect(received).toBe(expected);
-});
-test('healthy HP', () => {
-  const characters = { name: 'маг', health: undefined };
+test('No data', () => {
   const received = 'неверные данные';
-  const expected = showColor(characters);
-  expect(received).toBe(expected);
+  const expected = showColor(magisto);
+  expect(received).not.toBe(expected);
+});
+test('have value health?', () => {
+  expect(magisto).toHaveProperty('health');
 });
