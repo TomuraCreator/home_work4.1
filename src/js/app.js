@@ -1,4 +1,4 @@
-const magisto = { class: 'маг', health: '' };
+const magisto = { class: 'маг', health: 50 };
 function showColor(char) {
   if (char.health > 50) {
     return 'healthy';
